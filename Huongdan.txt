@@ -1,0 +1,2 @@
+b1 : vao thu muc android-> manifest de chinh sua chieu cua man hinh thanh chieu doc
+chinh thuoc tinh screenOrientation tu landscape thanh portrait
