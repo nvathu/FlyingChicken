@@ -4,7 +4,7 @@ import com.badlogic.gdx.ApplicationAdapter;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.graphics.GL20;
+
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -15,7 +15,7 @@ import com.badlogic.gdx.math.Rectangle;
 import java.util.ArrayList;
 import java.util.Random;
 
-import javax.xml.soap.Text;
+
 
 public class FlyingChicken extends ApplicationAdapter {
 	private SpriteBatch batch;
@@ -64,7 +64,9 @@ public class FlyingChicken extends ApplicationAdapter {
 	private Random random;
 
 	private Music coinsound;
-	private Music chicsnd;
+//	private Music chicsnd;
+
+
 
 
 	
@@ -73,6 +75,7 @@ public class FlyingChicken extends ApplicationAdapter {
 	public void create () {
 		//dung batch de hien thi nhung doi tuong len man hinh, dung texture de luu tru hinh anh
 		batch = new SpriteBatch();
+
 		//2 chuan bi hinh nen
 		background=new Texture("bg.png");
 		offset=0;
@@ -101,7 +104,7 @@ public class FlyingChicken extends ApplicationAdapter {
 		font.getData().setScale(10);
 
 		coinsound=Gdx.audio.newMusic(Gdx.files.internal("coin3.wav"));
-		chicsnd=Gdx.audio.newMusic(Gdx.files.internal("bird_flap.flac"));
+//		chicsnd=Gdx.audio.newMusic(Gdx.files.internal("birdflap.flac"));
 
 	}
 	//dung mot ham de tao ra cac dong xu,tao method tao xu
@@ -177,7 +180,7 @@ public class FlyingChicken extends ApplicationAdapter {
 			//xu li voi event cham bang Gdx, khi co ng chan vao man hinh dk se cho ra ket qua true
 			if(Gdx.input.justTouched()){
 				velocity=-10;
-				chicsnd.play();
+//				chicsnd.play();
 				coinsound.setVolume(0.5f);
 			}
 
@@ -272,8 +275,9 @@ public class FlyingChicken extends ApplicationAdapter {
 		//de ket thuc can goi ham batch.end
 		batch.end();
 	}
-	
-	@Override
+
+
+		@Override
 	public void dispose () {
 		batch.dispose();
 
